@@ -26,7 +26,12 @@
                 <a-asset-item id="bookshelf" src="https://raw.githack.com/robots-make-art-too/Group-Pirates/gh-pages/docs/assets/models/Welsh.glb"></a-asset-item>
                 <a-asset-item id="boat" src="https://raw.githack.com/robots-make-art-too/Group-Pirates/gh-pages/docs/assets/models/Vari.glb"></a-asset-item>
                 <a-asset-item id="csq" src="https://raw.githack.com/robots-make-art-too/Group-Pirates/gh-pages/docs/assets/models/csq.glb"></a-asset-item>
-                <audio id="sound" src="https://raw.githack.com/3700-Pixel-Pioneers/3700-Pixel-Pioneers.github.io/main/docs/ar-assets/CurtisAudio.mp3" preload="none"></audio>
+                <audio id="clhAudio" src="https://raw.githack.com/3700-Pixel-Pioneers/3700-Pixel-Pioneers.github.io/main/docs/ar-assets/CurtisAudio.mp3" preload="none"></audio>
+                <audio id="variAudio" src="https://raw.githack.com/3700-Pixel-Pioneers/3700-Pixel-Pioneers.github.io/main/docs/ar-assets/Vari_Audio.mp3" preload="none"></audio>
+                <audio id="treeAudio" src="https://raw.githack.com/3700-Pixel-Pioneers/3700-Pixel-Pioneers.github.io/main/docs/ar-assets/WelshOak_Audio.mp3" preload="none"></audio>
+                <audio id="osAudio" src="https://raw.githack.com/3700-Pixel-Pioneers/3700-Pixel-Pioneers.github.io/main/docs/ar-assets/Osgoode_Audio.mp3" preload="none"></audio>
+                <audio id="acwAudio" src="https://raw.githack.com/3700-Pixel-Pioneers/3700-Pixel-Pioneers.github.io/main/docs/ar-assets/accolade_audio.mp3" preload="none"></audio>
+                
 			</a-assets>
 
 
@@ -54,7 +59,7 @@
                     
                 </a-entity>
 
-                <a-entity sound="src: #sound" autoplay="false"></a-entity>
+                <a-entity sound="src: #treeAudio" autoplay="false"></a-entity>
 </a-scene>
 
 
@@ -69,7 +74,8 @@
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false
-                rayOrigin: mouse">
+                rayOrigin: mouse"
+                soundhandler>
                 
                 <a-entity 
                     id="boat_model" 
@@ -79,6 +85,8 @@
                     class="clickable"
                     gesture-handler>
                 </a-entity>
+
+                <a-entity sound="src: #variAudio" autoplay="false"></a-entity>
 
             </a-marker>
 
@@ -90,7 +98,8 @@
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false
-                rayOrigin: mouse">
+                rayOrigin: mouse"
+                soundhandler>
             
                 <a-entity 
                     id="burg_model" 
@@ -100,6 +109,8 @@
                     class="clickable"
                     gesture-handler>
                 </a-entity>
+
+                <a-entity sound="src: #clhAudio" autoplay="false"></a-entity>
 
             </a-marker>
 
@@ -111,7 +122,8 @@
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false
-                rayOrigin: mouse">
+                rayOrigin: mouse"
+                soundhandler>
             
                 <a-entity 
                     id="wendy_model" 
@@ -131,7 +143,8 @@
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false
-                rayOrigin: mouse">
+                rayOrigin: mouse"
+                soundhandler>
             
                 <a-entity 
                     id="acw_model" 
@@ -141,6 +154,8 @@
                     class="clickable"
                     gesture-handler>
                 </a-entity>
+
+                <a-entity sound="src: #acwAudio" autoplay="false"></a-entity>
             </a-marker>
 
             <a-marker  
@@ -151,7 +166,8 @@
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false
-                rayOrigin: mouse">
+                rayOrigin: mouse"
+                soundhandler>
             
                 <a-entity 
                     id="shark" 
@@ -161,6 +177,8 @@
                     class="clickable"
                     gesture-handler>
                 </a-entity>
+
+                <a-entity sound="src: #osAudio" autoplay="false"></a-entity>
             </a-marker>
 
 
