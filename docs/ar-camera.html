@@ -26,6 +26,7 @@
                 <a-asset-item id="bookshelf" src="https://raw.githack.com/robots-make-art-too/Group-Pirates/gh-pages/docs/assets/models/Welsh.glb"></a-asset-item>
                 <a-asset-item id="boat" src="https://raw.githack.com/robots-make-art-too/Group-Pirates/gh-pages/docs/assets/models/Vari.glb"></a-asset-item>
                 <a-asset-item id="csq" src="https://raw.githack.com/robots-make-art-too/Group-Pirates/gh-pages/docs/assets/models/csq.glb"></a-asset-item>
+                <audio id="sound" src="https://raw.githack.com/3700-Pixel-Pioneers/3700-Pixel-Pioneers.github.io/main/docs/ar-assets/CurtisAudio.mp3" preload="auto"></audio>
 			</a-assets>
 
 
@@ -47,10 +48,12 @@
                     scale="0.75 0.75 0.75" 
                     gltf-model="#bookshelf"
                     class="clickable"
-                    gesture-handler>
+                    gesture-handler
+                    soundhandler>
+                    
                 </a-entity>
 
-                <a-sound src="https://raw.githack.com/3700-Pixel-Pioneers/3700-Pixel-Pioneers.github.io/main/docs/ar-assets/CurtisAudio.mp3" autoplay="true" position="0 0 0"></a-sound>
+                <a-entity sound="src: #sound" autoplay="false"></a-entity>
 </a-scene>
 
 
@@ -163,5 +166,19 @@
 
         <a-entity camera></a-entity>
         </a-scene>
+
+        <script>
+            AFRAME.registerComponent('soundhandler', {
+                tick: function () {
+                       var entity = document.querySelector('[sound]');
+                     if (document.querySelector('a-marker').object3D.visible == true) {
+                        entity.components.sound.playSound();
+                    } else {
+                        entity.components.sound.pauseSound();
+                    }
+            
+                 }
+            });
+            </script>
     </body>
 </html>
